@@ -1,66 +1,65 @@
-📈 Stock_Recommendation_System
-📌 Overview
-Stock_Recommendation_System is a scalable, near-real-time analytics pipeline that delivers intelligent stock recommendations by combining real-time user feedback, historical stock data, and sentiment from financial news.
+# Stock Recommendation System
 
-This system uses K-Means Clustering to segment stocks or users based on behavioral, financial, and sentiment-driven features, enabling group-specific recommendations. It is powered by a big data architecture using Kafka, Spark, SQL + HDFS, and deployed in Docker on Ubuntu.
+## Overview
 
-🛠 Tools & Technologies Used
-🧰 Languages & Libraries
-Python – for preprocessing, clustering, and pipeline development
+**Stock_Recommendation_System** is a scalable, near-real-time analytics pipeline that delivers intelligent stock recommendations by integrating:
 
-scikit-learn – K-Means implementation and clustering utilities
+- Real-time user feedback via Kafka  
+- Historical stock data  
+- Sentiment analysis from financial news articles  
 
-NLTK / VaderSentiment – NLP sentiment analysis
+This system leverages **K-Means Clustering** to segment both stocks and users based on behavioral, financial, and sentiment-based features, enabling group-specific recommendations. It is built using a big data architecture with **Apache Kafka**, **Spark**, **SQL + HDFS**, and deployed using **Docker** on **Ubuntu**.
 
-Pandas, NumPy, Matplotlib, Seaborn – data manipulation and visualization
+---
 
-💻 Infrastructure & Storage
-Apache Kafka – real-time ingestion of user feedback
+## Tools & Technologies
 
-Apache Spark – distributed data processing for feature engineering
+### Programming Languages & Libraries
 
-MySQL / PostgreSQL – structured data storage (stock metadata, user profiles)
+- **Python** – preprocessing, clustering, and end-to-end pipeline  
+- **scikit-learn** – implementation of K-Means clustering  
+- **Pandas, NumPy** – data manipulation and transformation  
+- **Matplotlib, Seaborn** – data visualization  
+- **NLTK / VaderSentiment** – sentiment analysis from financial news  
 
-Hadoop HDFS – unstructured data storage (news articles, feedback logs)
+### Infrastructure & Storage
 
-Docker – containerized deployment
+- **Apache Kafka** – real-time ingestion of user feedback (ratings, comments)  
+- **Apache Spark** – distributed processing of structured/unstructured data  
+- **MySQL / PostgreSQL** – structured data storage (stock metrics, user profiles)  
+- **Hadoop HDFS** – unstructured data storage (financial articles, raw feedback)  
+- **Docker** – containerization for portability and deployment  
+- **Ubuntu (Linux)** – operating environment  
 
-Ubuntu (Linux) – development and deployment OS
+---
 
-🧠 Machine Learning: K-Means Clustering
-Used K-Means Clustering to group:
+## Machine Learning Approach
 
-Stocks with similar volatility, price trends, and sentiment
+### K-Means Clustering
 
-Users with similar investment behaviors or feedback patterns
+- Grouped stocks based on shared patterns in volatility, pricing, and sentiment  
+- Grouped users based on investment behaviors and feedback patterns  
+- Cluster insights were used to deliver targeted recommendations  
+- Helped align recommendations with user group risk profiles and preferences  
 
-Cluster insights were used to generate group-specific stock recommendations
+---
 
-Helped tailor risk profiles and suggested strategies for different user groups
+## Key Features
 
-💡 Key Features & Contributions
-⚡ Real-Time Kafka Ingestion: Collected user feedback (ratings/comments) and injected into the system.
+- **Real-Time Ingestion**: Kafka-based pipeline collects user feedback in real time  
+- **Hybrid Storage Architecture**:  
+  - SQL for structured data like stock fundamentals and user profiles  
+  - HDFS for unstructured data like news articles and raw comments  
+- **Distributed ETL**: Apache Spark jobs perform scalable data transformation and clustering  
+- **Sentiment-Enhanced Scoring**: Extracted and quantified sentiment from 500+ financial news articles  
+- **Unsupervised Learning**: Applied K-Means clustering to uncover market segments and user behavior groups  
+- **Containerized Pipeline**: Fully modular system deployed using Docker for consistency and scalability  
 
-📊 Hybrid Storage Architecture:
+---
 
-Structured data (SQL): user metadata, stock metrics
+## Output & Results
 
-Unstructured data (HDFS): news articles, raw feedback
-
-📈 Spark ETL Jobs: Performed clustering and data transformation at scale
-
-📰 Sentiment Analysis Engine: Extracted and scored sentiment from 500+ financial articles to augment clustering
-
-🧠 Unsupervised ML: K-Means revealed market segments and stock clusters for targeted recommendations
-
-🔄 Scalable & Modular Design: Fully containerized and ready for deployment
-
-📊 Output & Results
-📌 User/Stock Clusters: Stocks grouped by performance, volatility, and sentiment traits
-
-💬 User Feedback Clustering: Tailored recommendations based on group behavior
-
-📈 Insights Dashboard: Visualized clusters, sentiment impact, and stock segments
-
-✅ Improved relevance of recommendations and risk-adjusted decisions
-
+- **Stock Clustering**: Stocks segmented based on financial and sentiment metrics  
+- **User Feedback Analysis**: Group-level recommendation strategies personalized to user clusters  
+- **Visualization Dashboard**: Insights into cluster performance, sentiment trends, and user behavior patterns  
+- **Outcome**: Improved relevance and accuracy of stock recommendations using risk-adjusted and sentiment-informed logic  
